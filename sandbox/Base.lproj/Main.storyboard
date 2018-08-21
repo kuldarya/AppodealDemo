@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hM0-1j-STm">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Native-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="NativeViewController" customModule="sandbox" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="39I-L3-dQC">
+                                <rect key="frame" x="162" y="272" width="50" height="122"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FEN-fc-f3A">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <state key="normal" title="Load "/>
+                                        <connections>
+                                            <action selector="loadButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="K8f-PC-XAl"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hjV-wi-Zf6">
+                                        <rect key="frame" x="0.0" y="44" width="50" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <state key="normal" title="Show "/>
+                                        <connections>
+                                            <action selector="showButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wPy-6I-eNb"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="prp-fw-TkG">
+                                        <rect key="frame" x="0.0" y="88" width="50" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <state key="normal" title="Hide "/>
+                                        <connections>
+                                            <action selector="hideButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ulD-Hj-AhQ"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="39I-L3-dQC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="JA6-X6-Dny"/>
+                            <constraint firstItem="39I-L3-dQC" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Ytt-jK-L4H"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Native" id="992-wh-3MR">
+                        <barButtonItem key="rightBarButtonItem" title="Go to Banner" id="kCx-Uh-4La">
+                            <connections>
+                                <segue destination="VTL-cY-0tw" kind="show" id="h0q-hg-lgh"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="600.79999999999995" y="-179.46026986506749"/>
+        </scene>
+        <!--Banner-->
+        <scene sceneID="q9N-NM-nlO">
+            <objects>
+                <viewController storyboardIdentifier="BannerViewController" id="VTL-cY-0tw" customClass="BannerViewController" customModule="sandbox" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FEF-rt-K8o">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="O2m-5T-Ihf">
+                                <rect key="frame" x="164.5" y="272" width="45" height="122"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="roJ-Wh-yt6">
+                                        <rect key="frame" x="0.0" y="0.0" width="45" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <state key="normal" title="Load"/>
+                                        <connections>
+                                            <action selector="loadButtonPressed:" destination="VTL-cY-0tw" eventType="touchUpInside" id="jhv-sB-vdb"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wdW-Iv-fGh">
+                                        <rect key="frame" x="0.0" y="44" width="45" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <state key="normal" title="Show"/>
+                                        <connections>
+                                            <action selector="showButtonPressed:" destination="VTL-cY-0tw" eventType="touchUpInside" id="aa2-SQ-Aam"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P8X-ye-NBu">
+                                        <rect key="frame" x="0.0" y="88" width="45" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <state key="normal" title="Hide"/>
+                                        <connections>
+                                            <action selector="hideButtonPressed:" destination="VTL-cY-0tw" eventType="touchUpInside" id="oAU-BL-eTo"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="O2m-5T-Ihf" firstAttribute="centerX" secondItem="FEF-rt-K8o" secondAttribute="centerX" id="YmW-oB-Bfm"/>
+                            <constraint firstItem="O2m-5T-Ihf" firstAttribute="centerY" secondItem="FEF-rt-K8o" secondAttribute="centerY" id="wtW-gn-veh"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="qrE-dB-34X"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Banner" id="MSP-WH-gtE">
+                        <barButtonItem key="rightBarButtonItem" title="Go to Rewarded" id="Fpc-Qd-CBp">
+                            <connections>
+                                <segue destination="x8V-We-F8G" kind="show" id="gwc-SM-abu"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DEj-kP-uEX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1333.5999999999999" y="-175.86206896551727"/>
+        </scene>
+        <!--Rewarded Video-->
+        <scene sceneID="m6Y-iV-pmg">
+            <objects>
+                <viewController storyboardIdentifier="RewardedViewController" id="x8V-We-F8G" customClass="RewardedViewController" customModule="sandbox" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jfP-v4-wse">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Qds-af-TVN">
+                                <rect key="frame" x="164.5" y="294" width="45" height="78"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5UC-Gj-1qf">
+                                        <rect key="frame" x="0.0" y="0.0" width="45" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <state key="normal" title="Load"/>
+                                        <connections>
+                                            <action selector="loadButtonPressed:" destination="x8V-We-F8G" eventType="touchUpInside" id="tDW-f3-4ZH"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ycx-gS-AKb">
+                                        <rect key="frame" x="0.0" y="44" width="45" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <state key="normal" title="Show"/>
+                                        <connections>
+                                            <action selector="showButtonPressed:" destination="x8V-We-F8G" eventType="touchUpInside" id="fiK-jZ-6zV"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Qds-af-TVN" firstAttribute="centerX" secondItem="jfP-v4-wse" secondAttribute="centerX" id="6hn-aQ-Icg"/>
+                            <constraint firstItem="Qds-af-TVN" firstAttribute="centerY" secondItem="jfP-v4-wse" secondAttribute="centerY" id="thM-oj-ghg"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="eDF-cl-wSa"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Rewarded Video" id="nfI-St-HTn"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="y6p-EI-tfd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2082.4000000000001" y="-175.86206896551727"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Vn6-Ah-Mvr">
+            <objects>
+                <navigationController id="hM0-1j-STm" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="e2l-p1-Knr">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="bft-dB-Qdd"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dLC-Zc-Vuv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-142" y="-179"/>
+        </scene>
+    </scenes>
+</document>
