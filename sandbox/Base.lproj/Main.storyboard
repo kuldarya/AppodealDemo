@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Native-->
+        <!--Bottom Banner-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="NativeViewController" customModule="sandbox" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="BottomBannerViewController" customModule="sandbox" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -55,8 +55,8 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Native" id="992-wh-3MR">
-                        <barButtonItem key="rightBarButtonItem" title="Go to Banner" id="kCx-Uh-4La">
+                    <navigationItem key="navigationItem" title="Bottom Banner" id="992-wh-3MR">
+                        <barButtonItem key="rightBarButtonItem" title="Top Banner" id="kCx-Uh-4La">
                             <connections>
                                 <segue destination="VTL-cY-0tw" kind="show" id="h0q-hg-lgh"/>
                             </connections>
@@ -67,10 +67,10 @@
             </objects>
             <point key="canvasLocation" x="600.79999999999995" y="-179.46026986506749"/>
         </scene>
-        <!--Banner-->
+        <!--Top Banner-->
         <scene sceneID="q9N-NM-nlO">
             <objects>
-                <viewController storyboardIdentifier="BannerViewController" id="VTL-cY-0tw" customClass="BannerViewController" customModule="sandbox" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TopBannerViewController" id="VTL-cY-0tw" customClass="TopBannerViewController" customModule="sandbox" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="FEF-rt-K8o">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -112,8 +112,8 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="qrE-dB-34X"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Banner" id="MSP-WH-gtE">
-                        <barButtonItem key="rightBarButtonItem" title="Go to Rewarded" id="Fpc-Qd-CBp">
+                    <navigationItem key="navigationItem" title="Top Banner" id="MSP-WH-gtE">
+                        <barButtonItem key="rightBarButtonItem" title="Rewarded" id="Fpc-Qd-CBp">
                             <connections>
                                 <segue destination="x8V-We-F8G" kind="show" id="gwc-SM-abu"/>
                             </connections>

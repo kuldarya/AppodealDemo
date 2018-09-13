@@ -1,22 +1,30 @@
 import UIKit
 import Appodeal
 
-class NativeViewController: UIViewController, APDNativeAdLoaderDelegate
+class BottomBannerViewController: UIViewController
 {
-    //Initialize Appodeal native ad service object
-    private lazy var apdLoader: APDNativeAdLoader = {
-        let loader = APDNativeAdLoader()
-        loader.delegate = self
-        loader.loadAd(with: APDNativeAdType.auto)
-        return loader
-    }()
+    var bannerView: AppodealBannerView?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         //disabling automatic caching
-        Appodeal.setAutocache(false, types: .nativeAd)
+        Appodeal.setAutocache(false, types: .banner)
+        
+        // required: init ad banner
+        let bannerView = AppodealBannerView(size: kAppodealUnitSize_320x50, rootViewController: self)
+        
+        // required: add banner to superview
+        if let banner = bannerView {
+            self.view.addSubview(banner)
+        }
     }
-
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.setNavigationBarHidden(false, animated: false)
+    }
+    
     @IBAction func loadButtonPressed(_ sender: UIButton) {
         self.displayLoadAlert()
     }
@@ -30,38 +38,30 @@ class NativeViewController: UIViewController, APDNativeAdLoaderDelegate
     }
     
     private func displayLoadAlert() {
-        let loadAlert = UIAlertController(title: "Alert", message: "Loading Native Ad", preferredStyle: .alert)
+        let loadAlert = UIAlertController(title: "Alert", message: "Loading Bottom Banner", preferredStyle: .alert)
         let okAction = UIAlertAction(title: "OK", style: .default) { (_) in
-            Appodeal.cacheAd(.nativeAd)
+            Appodeal.cacheAd(.banner)
         }
         loadAlert.addAction(okAction)
         self.present(loadAlert, animated: true, completion: nil)
     }
     
-    private func displayShowAlert(){
-        let showAlert = UIAlertController(title: "Alert", message: "Showing Native Ad", preferredStyle: .alert)
+    private func displayShowAlert() {
+        let showAlert = UIAlertController(title: "Alert", message: "Showing Bottom Banner", preferredStyle: .alert)
         let okAction = UIAlertAction(title: "OK", style: .default) { (_) in
-            //ShowStyle .nativeAd is not available within this method => I used a banner style for it.
-            Appodeal.showAd(AppodealShowStyle.bannerTop, rootViewController: self)
+            Appodeal.showAd(AppodealShowStyle.bannerBottom, rootViewController: self)
         }
         showAlert.addAction(okAction)
         self.present(showAlert, animated: true, completion: nil)
     }
     
     private func displayHideAlert() {
-        let hideAlert = UIAlertController(title: "Alert", message: "Hiding Native Ad", preferredStyle: .alert)
+        let hideAlert = UIAlertController(title: "Alert", message: "Hiding Bottom Banner", preferredStyle: .alert)
         let okAction = UIAlertAction(title: "OK", style: .default) { (_) in
             Appodeal.hideBanner()
         }
         hideAlert.addAction(okAction)
         self.present(hideAlert, animated: true, completion: nil)
-    }
-
-    func nativeAdLoader(_ loader: APDNativeAdLoader!, didLoad nativeAds: [APDNativeAd]!){
-        NSLog("native ad was loaded")
-    }
-    func nativeAdLoader(_ loader: APDNativeAdLoader!, didFailToLoadWithError error: Error!){
-        NSLog("native ad failed to load")
     }
 
 }

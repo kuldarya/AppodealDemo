@@ -1,7 +1,7 @@
 import UIKit
 import Appodeal
 
-class BannerViewController: UIViewController
+class TopBannerViewController: UIViewController
 {
     var bannerView: AppodealBannerView?
     

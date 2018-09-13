@@ -44,20 +44,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		4B148FE1212BFC4E00DAA9C1 /* Native */ = {
+		4B148FE1212BFC4E00DAA9C1 /* Bottom Banner */ = {
 			isa = PBXGroup;
 			children = (
 				4B3FFA4E212A9BEA005E8AE3 /* NativeViewController.swift */,
 			);
-			path = Native;
+			path = "Bottom Banner";
 			sourceTree = "<group>";
 		};
-		4B148FE2212BFC5D00DAA9C1 /* Banner */ = {
+		4B148FE2212BFC5D00DAA9C1 /* Top Banner */ = {
 			isa = PBXGroup;
 			children = (
 				4B3FFA5E212A9F68005E8AE3 /* BannerViewController.swift */,
 			);
-			path = Banner;
+			path = "Top Banner";
 			sourceTree = "<group>";
 		};
 		4B148FE3212BFC6300DAA9C1 /* Rewarded */ = {
@@ -89,8 +89,8 @@
 		4B3FFA4B212A9BEA005E8AE3 /* sandbox */ = {
 			isa = PBXGroup;
 			children = (
-				4B148FE1212BFC4E00DAA9C1 /* Native */,
-				4B148FE2212BFC5D00DAA9C1 /* Banner */,
+				4B148FE1212BFC4E00DAA9C1 /* Bottom Banner */,
+				4B148FE2212BFC5D00DAA9C1 /* Top Banner */,
 				4B148FE3212BFC6300DAA9C1 /* Rewarded */,
 				4B3FFA50212A9BEA005E8AE3 /* Main.storyboard */,
 				4B3FFA53212A9BEB005E8AE3 /* Assets.xcassets */,
